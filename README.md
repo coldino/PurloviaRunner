@@ -28,6 +28,7 @@ ssh-keygen -t rsa -b 4096 -C "52712839+RaptorClaus@users.noreply.github.com"
 
 ### To run it
 ```sh
+docker-compose pull
 docker-compose run --rm purlovia
 ```
 It should be possible to schedule a task to do this easily. *Just remember to set the correct working directory!*
