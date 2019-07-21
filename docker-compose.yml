@@ -1,0 +1,20 @@
+version: '3'
+services:
+    purlovia:
+        image: coldino/purlovia:live
+
+        container_name: purlovia_runner
+        hostname: purlovia_runner
+
+        # We abandon Docker's temporary network identity for each container and use the host's
+        # ...or SteamCMD thinks we're a different machine each time and downloads afresh
+        network_mode: host
+
+        volumes:
+          - ./livedata:/app/livedata:delegated
+          - ./logs:/app/logs:delegated
+          - ./output:/app/output
+          - ./config:/app/config:ro
+
+        command:
+            python -m automate --live
