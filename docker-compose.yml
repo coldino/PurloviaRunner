@@ -6,13 +6,13 @@ services:
         container_name: purlovia_runner
         hostname: purlovia_runner
         
-        env_file: ./config/.env
+        env_file: ./.env
 
         volumes:
           - ./livedata:/app/livedata:delegated
           - ./logs:/app/logs:delegated
           - ./output:/app/output
-          - ./config:/app/config:ro
+          - ./id_rsa-raptor:/app/config/id_rsa-raptor:ro
 
         command:
             python -m automate --live

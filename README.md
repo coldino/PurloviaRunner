@@ -22,7 +22,7 @@ git config --local core.sshCommand "ssh -o LogLevel=error -o UserKnownHostsFile=
 ### If needed, create new key for Raptor Claus
 ```sh
 ssh-keygen -t rsa -b 4096 -C "52712839+RaptorClaus@users.noreply.github.com"
-# empty passcode, output to config/id_rsa-raptor
+# empty passcode, output to id_rsa-raptor
 ```
 * Install in Raptor Claus's ssh keys, cleaning out obsolete ones
 
