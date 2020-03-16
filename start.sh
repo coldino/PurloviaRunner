@@ -14,7 +14,7 @@ function _selfupdate() {
 
 function _run_container() {
 	docker-compose pull || exit 4
-	exec docker-compose run --rm purlovia
+	exec docker-compose run --rm purlovia > /dev/null
 }
 
 case "$1" in
