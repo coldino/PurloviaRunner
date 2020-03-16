@@ -5,6 +5,8 @@ services:
 
         container_name: purlovia_runner
         hostname: purlovia_runner
+        
+        env_file: ./config/.env
 
         volumes:
           - ./livedata:/app/livedata:delegated
