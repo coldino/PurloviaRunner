@@ -1,8 +1,6 @@
 #!/bin/bash
 JOBUSER="purlovia"
-BASEDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
-
-BASEDIR="$BASEDIR/.."
+BASEDIR="$(dirname $( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd ))"
 
 if [[ `whoami` != "$JOBUSER" ]]; then
 	echo "This script can be only ran by user \"$JOBUSER\""
