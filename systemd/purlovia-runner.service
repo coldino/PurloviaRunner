@@ -5,7 +5,7 @@ Description=Project Purlovia - digging up Ark data
 User=purlovia
 Group=purlovia
 WorkingDirectory=%h/runner
-ExecStart=/usr/bin/bash start.sh job
+ExecStart=/usr/bin/bash systemd/job.sh job
 
 ProtectSystem=full
 PrivateDevices=true

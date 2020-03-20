@@ -32,3 +32,20 @@ docker-compose pull
 docker-compose run --rm purlovia
 ```
 It should be possible to schedule a task to do this easily. *Just remember to set the correct working directory!*
+
+### Scheduling with SystemD
+An example unit and a timer can be found in the `systemd/` directory.
+
+If you choose to use it, install it:
+```sh
+## User mode
+$ ln -s systemd/purlovia-runner.service ~/.config/systemd/user/purlovia-runner.service
+## ... if you want it to run on boot, remember to enable lingering for the user.
+
+## System-wide
+# install -Dm0644 systemd/purlovia-runner.service /etc/systemd/system/purlovia-runner.service
+## ... or make a soft link
+# ln -s systemd/purlovia-runner.service /etc/systemd/system/purlovia-runner.service
+```
+
+Remember to reload loaded units with `systemctl daemon-reload` when updating the units.

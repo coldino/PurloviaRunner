@@ -1,8 +1,16 @@
 #!/bin/bash
-BASEDIR=$HOME/runner
+JOBUSER="purlovia"
+BASEDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+
+BASEDIR="$BASEDIR/.."
+
+if [[ `whoami` != "$JOBUSER" ]]; then
+	echo "This script can be only ran by user \"$JOBUSER\""
+	exit 1
+fi
 
 if [[ `pwd` != "$BASEDIR" ]]; then
-	echo "Start the script from \"$BASEDIR\""
+	echo "This script can be only ran inside of \"$BASEDIR\""
 	exit 1
 fi
 
