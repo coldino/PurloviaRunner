@@ -1,0 +1,14 @@
+[Unit]
+Description=Project Purlovia - digging up Ark data
+
+[Service]
+User=purlovia
+Group=purlovia
+WorkingDirectory=%h/runner
+ExecStart=/usr/bin/bash systemd/job.sh job
+
+ProtectSystem=full
+PrivateDevices=true
+
+[Install]
+WantedBy=multi-user.target
