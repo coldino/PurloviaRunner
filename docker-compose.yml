@@ -15,4 +15,4 @@ services:
           - ./id_rsa-raptor:/app/config/id_rsa-raptor:ro
 
         command:
-            python -m automate --live
+            python -m automate --live --skip-push
