@@ -1,6 +1,5 @@
 [Unit]
 Description=Run Purlovia every day
-Requires=purlovia-runner.service
 
 [Timer]
 Unit=purlovia-runner.service
