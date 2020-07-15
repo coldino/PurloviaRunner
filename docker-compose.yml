@@ -15,4 +15,4 @@ services:
           - ./id_rsa-raptor:/app/config/id_rsa-raptor:ro
 
         command:
-            python -m automate sanity,asb,wiki --live --skip-push
+            python -m automate sanity,asb,wiki --live
