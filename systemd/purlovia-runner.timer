@@ -3,7 +3,7 @@ Description=Run Purlovia every day
 
 [Timer]
 Unit=purlovia-runner.service
-OnCalendar=*-*-* 08,22:00:00
+OnCalendar=*-*-* 08,20:00:00
 Persistent=true
 
 [Install]
