@@ -12,12 +12,14 @@ mkdir -p livedata logs
 
 ### Setup output repo
 ```sh
-git clone --single-branch -b master git@github.com:arkutils/Obelisk.git output
+git clone --single-branch -b master https://github.com/arkutils/Obelisk.git output
 cd output
 git config --local user.name "Raptor Claus"
 git config --local user.email 52712839+RaptorClaus@users.noreply.github.com
 git config --local core.sshCommand "ssh -o LogLevel=error -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -i /app/config/id_rsa-raptor -F /dev/null"
 ```
+
+(then repeat for the ObeliskSOTF repository in `output-sotf`)
 
 ## If needed, create new key for Raptor Claus
 ```sh
