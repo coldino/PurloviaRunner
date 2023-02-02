@@ -19,7 +19,7 @@ git config --local user.email 52712839+RaptorClaus@users.noreply.github.com
 git config --local core.sshCommand "ssh -o LogLevel=error -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -i /app/config/id_rsa-raptor -F /dev/null"
 ```
 
-### If needed, create new key for Raptor Claus
+## If needed, create new key for Raptor Claus
 ```sh
 ssh-keygen -t rsa -b 4096 -C "52712839+RaptorClaus@users.noreply.github.com"
 # empty passcode, output to id_rsa-raptor
