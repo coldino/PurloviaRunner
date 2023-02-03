@@ -2,5 +2,5 @@ id_*
 .env
 
 logs/
-output/
+output*/
 livedata/

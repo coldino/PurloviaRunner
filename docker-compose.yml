@@ -12,6 +12,7 @@ services:
           - ./livedata:/app/livedata:delegated
           - ./logs:/app/logs:delegated
           - ./output:/app/output
+          - ./output-sotf:/app/output-sotf
           - ./id_rsa-raptor:/app/config/id_rsa-raptor:ro
 
         command:
