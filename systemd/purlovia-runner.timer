@@ -1,9 +1,9 @@
 [Unit]
-Description=Run Purlovia every day
+Description=Run Purlovia regularly
 
 [Timer]
 Unit=purlovia-runner.service
-OnCalendar=2..22:2/14:14
+OnCalendar=2..22:3..59/17 # every 17 minutes, offset by 3, from the hours of 2-22 (to avoid Steam update times)
 Persistent=true
 
 [Install]
